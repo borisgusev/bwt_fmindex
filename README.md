@@ -10,7 +10,7 @@ bwt_decode function using LF mapping
 
 ### fmindex.py
 
-a simple implementation of FM indexing to do substring queries. Practical use would necessitate compression of bwt_string and imporiving the locating algorythm
+a simple implementation of FM indexing to do substring queries. Practical use would necessitate compression of encoded string, using a more sparcely calculated Occ table, and improving the algorythm for translating the FM index back into text index. The latter currently does the naive approach of iterating until looping to end-of-string symbol, giving it O(N^2) complexity. Briefly, a better approach would be to have precalculated mappings for certain indices throughout the string and iterating until reaching such index rather than to the end.
 
 
 sources:
